@@ -13,3 +13,24 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 - [ ] 웹 지도
 - [ ] 자바/베드락 동시 지원
 - [ ] 귀환
+
+## 서버 실행
+
+### 사전 요구 사항
+
+- [asdf-vm](https://asdf-vm.com/)을 설치해주십시오. Java 런타임 관리를 위해 사용합니다.
+
+### 설치
+
+- `install-runtime.sh`를 실행해 asdf 런타임이 깝니다.
+- `install-server.sh`를 실행해 서버 실행에 필요한 파일을 내려받습니다.
+
+### 시범 실행
+
+- `run.sh`를 직접 실행해 서버를 실행해봅니다.
+
+### 포트 정보
+
+- Java Edition 서버: 25000 포트
+- Bedrock Edition 서버: 25001 포트
+- BlueMap: 25002 포트

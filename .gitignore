@@ -1,0 +1,35 @@
+# Minecraft related files
+*.jar
+
+## Server by Server data
+banned-ips.json
+banned-players.json
+whitelist.json
+usercache.json
+ops.json
+logs/
+bluemap/
+
+## Installation Related
+version_history.json
+versions/
+libraries/
+cache/
+
+## World Data
+world/
+world_nether/
+world_the_end/
+
+## Not to Configurate
+bukkit.yml
+commands.yml
+help.yml
+permissions.yml
+paper-world-defaults.yml
+
+## Configuration should be overwritted
+server.properties
+spigot.yml
+paper-global.yml
+!**/baseconfig/**/*

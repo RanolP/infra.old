@@ -1,0 +1,5 @@
+messages:
+  kick:
+    connection-throttle: 연결이 너무 많습니다! 잠깐 기다렸다가 접속해주세요.
+  no-permission: <red>안타깝게도 명령어를 실행할 권한이 없습니다.
+    만약 실행되는 게 맞다고 생각하신다면 서버 관리자에게 연락해보세요.

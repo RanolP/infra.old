@@ -9,4 +9,4 @@ tcp:
     vanilla:
       loadBalancer:
         servers:
-          - address: ':25000'
+          - address: ':25000/tcp'

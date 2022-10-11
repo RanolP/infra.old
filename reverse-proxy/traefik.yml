@@ -1,0 +1,5 @@
+entryPoints:
+  minecraft-java:
+    address: ':25565/tcp'
+file:
+  directory: 'rules'

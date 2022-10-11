@@ -13,6 +13,8 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 - [ ] 웹 지도
 - [ ] 자바/베드락 동시 지원
 - [ ] 귀환
+  - [ ] Waystone
+  - [ ] Home
 
 ## 서버 실행
 

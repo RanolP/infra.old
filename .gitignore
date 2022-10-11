@@ -9,6 +9,7 @@ usercache.json
 ops.json
 logs/
 bluemap/
+**/CommandHelper/.cache
 
 ## Installation Related
 version_history.json
@@ -27,6 +28,7 @@ commands.yml
 help.yml
 permissions.yml
 paper-world-defaults.yml
+**/prefs/
 
 ## Configuration should be overwritted
 server.properties

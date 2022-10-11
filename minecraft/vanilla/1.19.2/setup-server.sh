@@ -82,12 +82,16 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 1 "Install Plugins"
+BEGIN_SUBSTEP 2 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
 DOWNLOAD "https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v3.4/BlueMap-3.4-spigot.jar" INTO "plugins/BlueMap 3.4.jar"
 # DOWNLOAD_PLUGIN "83557" VERSION "469275" INTO "plugins/BlueMap 3.4.jar"
+
+SUBSTEP "CommandHelper"
+DOWNLOAD "https://apps.methodscript.com/builds/commandhelperjar/build-280%2Fcommandhelper-3.3.5-SNAPSHOT-full.jar" INTO "plugins/commandhelper-3.3.5-SNAPSHOT-full-build-280.jar"
+# DOWNLOAD_PLUGIN "64681" VERSION "404127" INTO "plugins/commandhelper-3.3.5-SNAPSHOT-full-build-280.jar"
 
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties

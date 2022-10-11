@@ -1,7 +1,0 @@
-play.ranol.tk:25565 {
-	reverse_proxy localhost:25000
-}
-
-https://play.ranol.tk/map {
-	reverse_proxy localhost:25002
-}

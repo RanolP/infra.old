@@ -17,7 +17,7 @@ exec=`realpath $DIR/start.sh` \\ \n\
     working_dir=`realpath $DIR` \
     envsubst < $DIR/minecraft-vanilla.base.service > $DIR/minecraft-vanilla.service
 
-STEP "Copy systemd service into /etc/systemd/system/minecraft-vanilla.service"
-RUN "sudo cp $DIR/minecraft-vanilla.service /etc/systemd/system/minecraft-vanilla.service"
+STEP "Copy systemd service into /etc/systemd/user/minecraft-vanilla.service"
+RUN "sudo cp $DIR/minecraft-vanilla.service /etc/systemd/user/minecraft-vanilla.service"
 
 DONE "Minecraft Vanilla Service Installiation"

@@ -3,6 +3,7 @@ Description=Minecraft Vanilla Server
 
 [Service]
 ExecStart=$exec
+Restart=always
 WorkingDirectory=$working_dir
 KillSignal=SIGINT
 

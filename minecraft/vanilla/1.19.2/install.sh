@@ -8,12 +8,12 @@ BEGIN_STEPS 2
 
 STEP "Make systemd service from base config"
 FAKERUN "\
-exec=\"`which bash` -c `realpath $DIR/start.sh`\" \\ \n\
+exec=\"`which bash` -c source /opt/asdf-vm/asdf.sh && `realpath $DIR/start.sh`\" \\ \n\
       working_dir=`realpath $DIR` \\ \n\
       envsubst < $DIR/minecraft-vanilla.base.service > $DIR/minecraft-vanilla.service
 "
 \
-    exec="`which bash` -c `realpath $DIR/start.sh`" \
+    exec="`which bash` -c source /opt/asdf-vm/asdf.sh &&  `realpath $DIR/start.sh`" \
     working_dir=`realpath $DIR` \
     envsubst < $DIR/minecraft-vanilla.base.service > $DIR/minecraft-vanilla.service
 

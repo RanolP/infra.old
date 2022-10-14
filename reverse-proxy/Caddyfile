@@ -1,7 +1,7 @@
-http://play.ranol.tk/map {
+http://play.ranol.tk/ {
 	reverse_proxy :25001
 }
 
-https://play.ranol.tk/map {
+https://play.ranol.tk/ {
 	reverse_proxy :25001
 }

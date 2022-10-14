@@ -65,7 +65,7 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 - `setup-runtime.sh`를 실행해 asdf 런타임이 깝니다.
 - `setup-server.sh`를 실행해 서버 실행에 필요한 파일을 내려받습니다.
 - `install.sh`를 실행해 systemd 서비스 파일을 생성해 배치합니다.
-- `systemctl enable minecraft-vanilla`로 서비스를 활성화합니다.
+- `systemctl --user enable minecraft-vanilla`로 서비스를 활성화합니다.
 
 ### 시범 실행
 

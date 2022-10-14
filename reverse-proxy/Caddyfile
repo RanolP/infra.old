@@ -1,7 +1,7 @@
-http://play.ranol.tk/ {
+http://play.ranol.tk {
 	reverse_proxy :25001
 }
 
-https://play.ranol.tk/ {
+https://play.ranol.tk {
 	reverse_proxy :25001
 }

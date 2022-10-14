@@ -1,0 +1,42 @@
+# Minecraft related files
+*.jar
+
+## Server by Server data
+banned-ips.json
+banned-players.json
+whitelist.json
+usercache.json
+ops.json
+logs/
+bluemap/
+plugins/CommandHelper/.cache
+.console_history
+plugins/floodgate/key.pem
+
+## Installation Related
+version_history.json
+versions/
+libraries/
+cache/
+
+## World Data
+world/
+world_nether/
+world_the_end/
+
+## Not to Configurate
+bukkit.yml
+commands.yml
+help.yml
+permissions.yml
+config/paper-world-defaults.yml
+plugins/CommandHelper/prefs/
+plugins/Geyser-Spigot/locales
+plugins/floodgate/config.yml
+
+## Configuration should be overwritted
+server.properties
+spigot.yml
+config/paper-global.yml
+plugins/Geyser-Spigot/config.yml
+!baseconfig/**/*

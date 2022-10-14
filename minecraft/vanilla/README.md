@@ -33,6 +33,6 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 
 ### 포트 정보
 
-- Java Edition 서버: 25000 포트
-- Bedrock Edition 서버: 25001 포트
-- BlueMap: 25002 포트
+- Java Edition 서버: 25000 포트 - SRV 레코드를 활용해 25565 포트로 접속할 수 있습니다.
+- Bedrock Edition 프록시: 19132 포트
+- BlueMap 웹 서버: 25001 포트 - 리버스 프록시를 통해 443 포트로 HTTPS 접속이 가능합니다.

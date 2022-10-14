@@ -82,7 +82,7 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 2 "Install Plugins"
+BEGIN_SUBSTEP 4 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
@@ -93,9 +93,16 @@ SUBSTEP "CommandHelper"
 DOWNLOAD "https://apps.methodscript.com/builds/commandhelperjar/build-280%2Fcommandhelper-3.3.5-SNAPSHOT-full.jar" INTO "plugins/commandhelper-3.3.5-SNAPSHOT-full-build-280.jar"
 # DOWNLOAD_PLUGIN "64681" VERSION "404127" INTO "plugins/commandhelper-3.3.5-SNAPSHOT-full-build-280.jar"
 
+SUBSTEP "GeyserMC"
+DOWNLOAD "https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/1211/artifact/bootstrap/spigot/build/libs/Geyser-Spigot.jar" INTO "plugins/Geyser-Spigot-build-1211.jar"
+
+SUBSTEP "GeyserMC - Floodgate"
+DOWNLOAD "https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/73/artifact/spigot/build/libs/floodgate-spigot.jar" INTO "plugins/floodgate-spigot-build-72.jar"
+
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties
 RUN cp $DIR/baseconfig/spigot.yml $DIR/spigot.yml
 RUN cp $DIR/baseconfig/config/paper-global.yml $DIR/config/paper-global.yml
+RUN cp $DIR/baseconfig/plugins/Geyser-Spigot/config.yml $DIR/plugins/Geyser-Spigot/config.yml
 
 DONE

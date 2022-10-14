@@ -1,0 +1,14 @@
+bedrock:
+  address: 0.0.0.0
+  port: 19132
+
+remote:
+  address: auto
+  port: 25565
+  auth-type: floodgate
+
+passthrough-motd: true
+passthrough-protocol-name: true
+passthrough-player-counts: true
+
+config-version: 4

@@ -3,7 +3,7 @@ Description = "Reverse Proxy for the Web Services"
 
 [Service]
 ExecStart = "$exec"
-Restart = "always"
+Restart = "Always"
 WorkingDirectory = "$working_dir"
 User = "root"
 

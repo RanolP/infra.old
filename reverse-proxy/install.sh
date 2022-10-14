@@ -9,12 +9,12 @@ BEGIN_STEPS 2
 STEP "Make systemd service from base config"
 FAKERUN "\
 exec=`which caddy` \\ \n\
-      working_dir=`realpath $DIR/reverse-proxy` \\ \n\
+      working_dir=`realpath $DIR` \\ \n\
       envsubst < $DIR/reverse-proxy.base.service > $DIR/reverse-proxy.service
 "
 \
     exec=`which caddy` \
-    working_dir=`realpath $DIR/reverse-proxy` \
+    working_dir=`realpath $DIR` \
     envsubst < $DIR/reverse-proxy.base.service > $DIR/reverse-proxy.service
 
 STEP "Copy systemd service into /etc/systemd/system/reverse-proxy.service"

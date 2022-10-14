@@ -2,7 +2,8 @@
 Description=Reverse Proxy for the Web Services
 
 [Service]
-ExecStart=$exec
+ExecStart=$exec run
+Restart=always
 WorkingDirectory=$working_dir
 User=root
 

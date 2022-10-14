@@ -8,13 +8,51 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 
 ## 삶의 품질을 높이는 기능 목록
 
+- [x] 웹 지도 - BlueMap
+- [x] 자바/베드락 에디션 동시 지원 - Geyser + Floodgate
 - [ ] 버림 방지
 - [ ] 시체 회수
-- [ ] 웹 지도
-- [ ] 자바/베드락 동시 지원
+- [ ] 쓰레기통
 - [ ] 귀환
   - [ ] Waystone
   - [ ] Home
+- [ ] 생명력 막대/피해 표시기
+- [ ] WAILA
+- [ ] Tips/Guide
+- [ ] Bundle 레시피 제공
+- [ ] FindMe?
+- [ ] Carry On
+- [ ] Creative Flight
+- [ ] Craftable Magics
+- [ ] Artifacts
+- [ ] Enchantments++
+- [ ] Backpack?
+- [ ] Sleep -> Buff
+- [ ] Healing Campfire
+- [ ] Dynamic Light?
+- [ ] FastLeafDecay?
+- [ ] Chunk Claim
+- [ ] Teams
+- [ ] Escape!
+- [ ] Ultimine? Choptree?
+- [ ] Hat
+- [ ] Horse
+- [ ] RPG-ish Combat
+  - [ ] Parry
+  - [ ] Dualwield
+  - [ ] Roll
+  - [ ] Wall-run
+  - [ ] Wall Climb
+- [ ] Travel Anchor
+- [ ] Farming QoL
+  - [ ] Farming -> XP
+  - [ ] No Trampling
+  - [ ] Right Click Harvest
+- [ ] Tiny Charcoal <- Disc Fragment
+- [ ] Wither Skeleton Skull Fragment <- Dark Oak Button
+- [ ] Chat Relay
+- [ ] Summoning Altar
+- [ ] Enchantment Extractor
 
 ## 서버 실행
 

@@ -1,0 +1,11 @@
+[Unit]
+Description = "Reverse Proxy for the Web Services"
+
+[Service]
+ExecStart = "$exec"
+Restart = "always"
+WorkingDirectory = "$working_dir"
+User = "root"
+
+[Install]
+WantedBy = "multi-user.target"

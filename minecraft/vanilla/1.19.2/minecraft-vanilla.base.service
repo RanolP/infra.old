@@ -1,5 +1,5 @@
 [Unit]
-Description=Reverse Proxy for the Web Services
+Description=Minecraft Vanilla Server
 
 [Service]
 ExecStart=$exec

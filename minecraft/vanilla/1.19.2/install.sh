@@ -13,7 +13,7 @@ exec=`which bash` -c source /opt/asdf-vm/asdf.sh && `realpath $DIR/start.sh` \\ 
       envsubst < $DIR/minecraft-vanilla.base.service > $DIR/minecraft-vanilla.service
 "
 \
-    exec=`realpath $DIR/start.sh` \
+    exec=`which bash` -c `realpath $DIR/start.sh` \
     working_dir=`realpath $DIR` \
     envsubst < $DIR/minecraft-vanilla.base.service > $DIR/minecraft-vanilla.service
 

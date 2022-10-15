@@ -1,11 +1,12 @@
-play.ranol.tk {
-	root ../minecraft/vanilla/
+:8481 {
 	handle_path /map* {
+		root ../minecraft/vanilla/BlueMapVue/dist
 		encode gzip
 		try_files {path} /index.html
-		file_server /BlueMapVue/dist
+		file_server
 	}
 	handle_path /map-data* {
-		file_server /1.19.2/bluemap/web
+		root ../minecraft/vanilla/1.19.2/bluemap/web
+		file_server
 	}
 }

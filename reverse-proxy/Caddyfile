@@ -1,7 +1,6 @@
-http://play.ranol.tk {
-	reverse_proxy /map/* :25001
-}
-
-https://play.ranol.tk {
-	reverse_proxy /map/* :25001
+play.ranol.tk {
+	route /map/* {
+    	uri strip_prefix /map
+		reverse_proxy :25001
+	}
 }

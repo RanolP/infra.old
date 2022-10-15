@@ -1,4 +1,4 @@
-:8481 {
+play.ranol.tk {
 	handle_path /map* {
 		root ../minecraft/vanilla/BlueMapVue/dist
 		encode gzip

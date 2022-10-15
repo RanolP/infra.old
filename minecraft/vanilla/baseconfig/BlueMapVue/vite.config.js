@@ -8,17 +8,17 @@ export default defineConfig({
     proxy: {
       '/settings.json': {
         //target: 'http://localhost:8100',
-        target: 'https://play.ranol.tk/map-data',
+        target: 'https://map-data.play.ranol.tk/test',
         changeOrigin: true,
       },
       '/maps': {
         //target: 'http://localhost:8100',
-        target: 'https://play.ranol.tk/map-data',
+        target: 'https://map-data.play.ranol.tk',
         changeOrigin: true,
       },
       '/assets/playerheads': {
         //target: 'http://localhost:8100',
-        target: 'https://play.ranol.tk/map-data',
+        target: 'https://map-data.play.ranol.tk',
         changeOrigin: true,
       },
     },

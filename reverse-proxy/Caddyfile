@@ -1,5 +1,9 @@
 play.ranol.tk {
-	handle_path /map* {
-		reverse_proxy :25001
+	root ../minecraft/vanilla/
+	handle_path /map {
+		file_server /BlueMapVue/dist
+	}
+	handle_path /map-data {
+		file_server /1.19.2/bluemap/web
 	}
 }

@@ -1,0 +1,5 @@
+[submodule "BlueMapVue"]
+	path = minecraft/vanilla/BlueMapVue
+	url = https://github.com/tsutoringo/BlueMapVue
+	branch = feat/change-bundler
+	ignore = dirty

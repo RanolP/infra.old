@@ -1,6 +1,5 @@
 play.ranol.tk {
-	route /map/* {
-    	uri strip_prefix map
+	handle_path /map/ {
 		reverse_proxy :25001
 	}
 }

@@ -1,0 +1,16 @@
+{
+  "files.exclude": {
+    // Minecraft: World Data
+    "minecraft/**/world": true,
+    "minecraft/**/world_nether": true,
+    "minecraft/**/world_the_end": true,
+
+    // Minecraft: Server Data
+    "minecraft/**/banned-ips.json": true,
+    "minecraft/**/banned-players.json": true,
+    "minecraft/**/whitelist.json": true,
+    "minecraft/**/usercache.json": true,
+    "minecraft/**/ops.json": true,
+    "minecraft/**/logs/": true
+  }
+}

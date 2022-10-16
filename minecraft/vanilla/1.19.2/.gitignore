@@ -1,13 +1,11 @@
-# Minecraft related files
+# Minecraft Vanilla .gitignore
+
+## Executable/Library
+
 *.jar
 
-## Server by Server data
-banned-ips.json
-banned-players.json
-whitelist.json
-usercache.json
-ops.json
-logs/
+## Server Data
+
 bluemap/
 plugins/CommandHelper/.cache
 .console_history
@@ -17,17 +15,14 @@ plugins/PlayerNPC/persistent
 plugins/ChestSort/playerdata
 
 ## Installation Related
+
 version_history.json
 versions/
 libraries/
 cache/
 
-## World Data
-world/
-world_nether/
-world_the_end/
-
 ## Not to Configurate
+
 bukkit.yml
 commands.yml
 help.yml
@@ -40,6 +35,7 @@ plugins/LuckPerms/
 plugins/CoreProtect/
 
 ## Configuration should be overwritted
+
 server.properties
 spigot.yml
 config/paper-global.yml
@@ -47,7 +43,11 @@ plugins/Geyser-Spigot/config.yml
 !baseconfig/**/*
 
 ## Pre-fetched plugins
+
 !plugins/Graves-4.9.jar
 !plugins/PlayerNPC 2022.8.jar
 !plugins/ChestSort-13.4.0.jar
 !plugins/LuckPerms-Bukkit-5.4.40.jar
+
+## Development Stage Data
+plugins/MethodScript

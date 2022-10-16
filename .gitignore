@@ -1,2 +1,21 @@
+# Minecraft
+
+## World Data
+
+minecraft/**/world/
+minecraft/**/world_nether/
+minecraft/**/world_the_end/
+
+## Server Data
+minecraft/**/banned-ips.json
+minecraft/**/banned-players.json
+minecraft/**/whitelist.json
+minecraft/**/usercache.json
+minecraft/**/ops.json
+minecraft/**/logs/
+
+
+# systemd services
+
 *.service
 !*.base.service

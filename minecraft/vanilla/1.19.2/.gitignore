@@ -12,6 +12,7 @@ bluemap/
 plugins/CommandHelper/.cache
 .console_history
 plugins/floodgate/key.pem
+plugins/Graves/data
 
 ## Installation Related
 version_history.json
@@ -40,3 +41,7 @@ spigot.yml
 config/paper-global.yml
 plugins/Geyser-Spigot/config.yml
 !baseconfig/**/*
+
+## Pre-fetched plugins
+!plugins/Graves-4.9.jar
+!plugins/PlayerNPC 2022.8.jar

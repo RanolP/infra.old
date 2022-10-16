@@ -8,7 +8,7 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 4 "Install Plugins"
+BEGIN_SUBSTEP 5 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
@@ -24,6 +24,14 @@ DOWNLOAD "https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/1211/arti
 
 SUBSTEP "GeyserMC - Floodgate"
 DOWNLOAD "https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/73/artifact/spigot/build/libs/floodgate-spigot.jar" INTO "plugins/floodgate-spigot-build-72.jar"
+
+SUBSTEP "Graves"
+SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
+# DOWNLOAD_PLUGIN "96774" VERSION "465387" INTO "plugins/Graves 4.9.jar"
+
+SUBSTEP "Graves Integration: PlayerNPC"
+SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
+# DOWNLOAD_PLUGIN "93625" VERSION "465238" INTO "plugins/PlayerNPC 2022.8.jar"
 
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties

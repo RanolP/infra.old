@@ -8,7 +8,7 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 5 "Install Plugins"
+BEGIN_SUBSTEP 7 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
@@ -32,6 +32,10 @@ SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin h
 SUBSTEP "Graves Integration: PlayerNPC"
 SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
 # DOWNLOAD_PLUGIN "93625" VERSION "465238" INTO "plugins/PlayerNPC 2022.8.jar"
+
+SUBSTEP "ChestSort"
+SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
+# DOWNLOAD_PLUGIN "59773" VERSION "471019" INTO "plugins/ChestSort 13.4.0.jar"
 
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties

@@ -13,6 +13,8 @@ plugins/CommandHelper/.cache
 .console_history
 plugins/floodgate/key.pem
 plugins/Graves/data
+plugins/PlayerNPC/persistent
+plugins/ChestSort/playerdata
 
 ## Installation Related
 version_history.json
@@ -45,3 +47,4 @@ plugins/Geyser-Spigot/config.yml
 ## Pre-fetched plugins
 !plugins/Graves-4.9.jar
 !plugins/PlayerNPC 2022.8.jar
+!plugins/ChestSort-13.4.0.jar

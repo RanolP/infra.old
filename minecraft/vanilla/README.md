@@ -11,6 +11,7 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 - [x] 웹 지도 - BlueMap
 - [x] 자바/베드락 에디션 동시 지원 - Geyser + Floodgate
 - [x] 시체 회수 - Graves
+- [x] 상자 정리 - ChestSort
 - [ ] 버림 방지
 - [ ] 쓰레기통
 - [ ] 귀환

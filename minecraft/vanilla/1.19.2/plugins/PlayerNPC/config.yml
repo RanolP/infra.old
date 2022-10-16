@@ -1,0 +1,14 @@
+autoUpdate: false
+debug: false
+skinUpdate:
+  # TimeUnit: SECONDS, MINUTES, HOURS, DAYS
+  frequency:
+    ==: dev.sergiferry.playernpc.api.NPCLib$SkinUpdateFrequency
+    value: 1
+    timeUnit: DAYS
+gazeUpdate:
+  ticks: 5
+  # GazeUpdateType: MOVE_EVENT, TICKS
+  type: MOVE_EVENT
+tabListHide:
+  ticks: 10

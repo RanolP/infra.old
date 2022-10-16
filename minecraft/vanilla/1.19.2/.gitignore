@@ -36,6 +36,8 @@ config/paper-world-defaults.yml
 plugins/CommandHelper/prefs/
 plugins/Geyser-Spigot/locales
 plugins/floodgate/config.yml
+plugins/LuckPerms/
+plugins/CoreProtect/
 
 ## Configuration should be overwritted
 server.properties
@@ -48,3 +50,4 @@ plugins/Geyser-Spigot/config.yml
 !plugins/Graves-4.9.jar
 !plugins/PlayerNPC 2022.8.jar
 !plugins/ChestSort-13.4.0.jar
+!plugins/LuckPerms-Bukkit-5.4.40.jar

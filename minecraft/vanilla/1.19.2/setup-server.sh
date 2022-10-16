@@ -8,7 +8,7 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 7 "Install Plugins"
+BEGIN_SUBSTEP 9 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
@@ -36,6 +36,13 @@ SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin h
 SUBSTEP "ChestSort"
 SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
 # DOWNLOAD_PLUGIN "59773" VERSION "471019" INTO "plugins/ChestSort 13.4.0.jar"
+
+SUBSTEP "LuckPerms"
+SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
+# DOWNLOAD_PLUGIN "28140" VERSION "463843" INTO "plugins/LuckPerms-Bukkit-5.4.40.jar"
+
+SUBSTEP "CoreProtect"
+DOWNLOAD "https://github.com/PlayPro/CoreProtect/releases/download/v21.2/CoreProtect-21.2.jar" INTO "plugins/CoreProtect-21.2.jar"
 
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties

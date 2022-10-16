@@ -60,6 +60,11 @@ Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 �
 - [ ] Summoning Altar
 - [ ] Enchantment Extractor
 
+## 관리자 보조 수단
+
+- [x] 권한 관리 - LuckPerms
+- [x] 블록 로그 확인 - CoreProtect
+
 ## 서버 실행
 
 ### 사전 요구 사항

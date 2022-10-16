@@ -15,7 +15,7 @@ add_recipe(array(
     )
 ))
 
-bind(item_pickup, array(itemname: 'LEATHER'), null, @event) {
+bind('item_pickup', null, array(itemname: 'LEATHER'), @event) {
     @player = player()
-    runas('~console', "recipe give @player bundle")
+    runas('~console', "/recipe give @player commandhelper:bundle")
 }

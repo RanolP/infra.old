@@ -168,7 +168,7 @@ items:
     display-name: *outside-name
 
   leftclick-enabled:
-    display-name: &leftclick-name '<#2e86c1>&한번에 넣기<#/85c1e9>'
+    display-name: &leftclick-name '<#2e86c1>&l한번에 넣기<#/85c1e9>'
     material: PLAYER_HEAD
     base64: *base64-enabled
     lore:
@@ -192,7 +192,7 @@ items:
     display-name: *leftclick-name
 
   rightclick-enabled:
-    display-name: &rightclick-name '<#2e86c1>한번에 꺼내기<#/85c1e9>'
+    display-name: &rightclick-name '<#2e86c1>&l한번에 꺼내기<#/85c1e9>'
     material: PLAYER_HEAD
     base64: *base64-enabled
     lore:

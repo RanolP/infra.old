@@ -6,12 +6,17 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 허용 목록에 등록된 사람만 서버에 접속할 수 있으며,
 테러, 버그 악용, 서버에 불필요한 부하를 주는 행위나 기타 불쾌감을 주는 행위 등은 적발될 경우 차단당할 수 있습니다.
 
+기본적으로 기능은 Minecraft: Java Edition을 기준으로 개발되어 있기 때문에
+Bedrock Edition 클라이언트에서 이상하게 작동할 수 있습니다.
+Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 추가로 붙어 있으니 참고하시면 되겠습니다.
+호환성이 검증되지 않은 경우 :question:이 붙어 있습니다.
+
 ## 삶의 품질을 높이는 기능 목록
 
-- [x] 웹 지도 - BlueMap
-- [x] 자바/베드락 에디션 동시 지원 - Geyser + Floodgate
-- [x] 시체 회수 - Graves
-- [x] 상자 정리 - ChestSort
+- [x] 웹 지도 - BlueMap :star:
+- [x] Java/Bedrock 에디션 동시 지원 - Geyser + Floodgate :star:
+- [x] 시체 회수 - Graves :star:
+- [x] 상자 정리 - ChestSort :question:
 - [ ] 버림 방지
 - [ ] 쓰레기통
 - [ ] 귀환

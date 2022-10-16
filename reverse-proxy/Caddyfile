@@ -1,5 +1,6 @@
 play.ranol.tk {
-	handle_path /map* {
+	redir /map /map/
+	handle_path /map/* {
 		reverse_proxy :25001
 	}
 }

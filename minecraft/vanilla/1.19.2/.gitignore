@@ -33,6 +33,9 @@ plugins/Geyser-Spigot/locales
 plugins/floodgate/config.yml
 plugins/LuckPerms/
 plugins/CoreProtect/
+plugins/DiscordSRV/alerts.yml
+plugins/DiscordSRV/synchronization.yml
+plugins/DiscordSRV/voice.yml
 
 ## Configuration should be overwritted
 
@@ -40,6 +43,7 @@ server.properties
 spigot.yml
 config/paper-global.yml
 plugins/Geyser-Spigot/config.yml
+plugins/DiscordSRV/config.yml
 !baseconfig/**/*
 
 ## Pre-fetched plugins

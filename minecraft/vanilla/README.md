@@ -13,10 +13,10 @@ Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 �
 
 ## 삶의 품질을 높이는 기능 목록
 
-- [x] 웹 지도 - BlueMap :star:
-- [x] Java/Bedrock 에디션 동시 지원 - Geyser + Floodgate :star:
-- [x] 시체 회수 - Graves :star:
-- [x] 상자 정리 - ChestSort :question:
+- [x] 웹 지도 - [BlueMap](https://www.spigotmc.org/resources/bluemap.83557/) :star:
+- [x] Java/Bedrock 에디션 동시 지원 - [Geyser](https://github.com/GeyserMC/Geyser) + [Floodgate](https://github.com/GeyserMC/Floodgate) :star:
+- [x] 시체 회수 - [Graves](https://www.spigotmc.org/resources/graves.74208/) :star:
+- [x] 상자 정리 - [ChestSort](https://www.spigotmc.org/resources/chestsort-api.59773/) :question:
 - [ ] 버림 방지
 - [ ] 쓰레기통
 - [ ] 귀환

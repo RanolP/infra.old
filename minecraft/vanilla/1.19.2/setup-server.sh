@@ -8,7 +8,7 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 9 "Install Plugins"
+BEGIN_SUBSTEP 10 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
@@ -44,10 +44,16 @@ SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin h
 SUBSTEP "CoreProtect"
 DOWNLOAD "https://github.com/PlayPro/CoreProtect/releases/download/v21.2/CoreProtect-21.2.jar" INTO "plugins/CoreProtect-21.2.jar"
 
+SUBSTEP "DiscordSRV"
+DOWNLOAD "https://lol.scarsz.me/RlLqpp/DiscordSRV-Build-1.26.0.jar" INTO "plugins/DiscordSRV-Build-1.26.0.jar"
+
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties
 RUN cp $DIR/baseconfig/spigot.yml $DIR/spigot.yml
 RUN cp $DIR/baseconfig/config/paper-global.yml $DIR/config/paper-global.yml
 RUN cp $DIR/baseconfig/plugins/Geyser-Spigot/config.yml $DIR/plugins/Geyser-Spigot/config.yml
+
+FAKERUN "(set -a; source $DIR/../../.env; envsubst < $DIR/baseconfig/plugins/DiscordSRV/config.yml > $DIR/plugins/DiscordSRV/config.yml)"
+(set -a; source $DIR/../../.env; envsubst < $DIR/baseconfig/plugins/DiscordSRV/config.yml > $DIR/plugins/DiscordSRV/config.yml)
 
 DONE "Server Installation"

@@ -19,3 +19,6 @@ minecraft/**/logs/
 
 *.service
 !*.base.service
+
+# .env configuration
+.env

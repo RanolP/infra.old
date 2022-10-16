@@ -17,6 +17,9 @@ Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 �
 - [x] Java/Bedrock 에디션 동시 지원 - [Geyser](https://github.com/GeyserMC/Geyser) + [Floodgate](https://github.com/GeyserMC/Floodgate) :star:
 - [x] 시체 회수 - [Graves](https://www.spigotmc.org/resources/graves.74208/) :star:
 - [x] 상자 정리 - [ChestSort](https://www.spigotmc.org/resources/chestsort-api.59773/) :question:
+- [x] Discord 채팅 연동 - [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) :star:
+- [x] Bundle 레시피 제공 - 가죽 획득 시 해금됨
+- [x] 50% 수면으로 밤 넘기기
 - [ ] 버림 방지
 - [ ] 쓰레기통
 - [ ] 귀환
@@ -25,14 +28,12 @@ Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 �
 - [ ] 생명력 막대/피해 표시기
 - [ ] WAILA
 - [ ] Tips/Guide
-- [ ] Bundle 레시피 제공
 - [ ] FindMe?
 - [ ] Carry On
 - [ ] Creative Flight
 - [ ] Craftable Magics
 - [ ] Artifacts
 - [ ] Enchantments++
-- [ ] Backpack?
 - [ ] Sleep -> Buff
 - [ ] Healing Campfire
 - [ ] Dynamic Light?
@@ -56,7 +57,6 @@ Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 �
   - [ ] Right Click Harvest
 - [ ] Tiny Charcoal <- Disc Fragment
 - [ ] Wither Skeleton Skull Fragment <- Dark Oak Button
-- [ ] Chat Relay
 - [ ] Summoning Altar
 - [ ] Enchantment Extractor
 

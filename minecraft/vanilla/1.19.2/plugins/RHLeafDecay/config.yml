@@ -1,0 +1,51 @@
+#################################
+#                               #
+# Configuration for RHLeafDecay #
+#                               #
+#################################
+
+# Just replace the default info with your own. :)
+# Be careful! Make always sure to put an ' after and before the text!
+
+# You can select specific worlds for using the plugin
+#  - 'Included_World'
+#  - 'Decay_Only_In_This_World'
+whitelisted-worlds: []
+
+# You can also exclude specific worlds
+#  - 'Excluded_World'
+#  - 'This_World_Will_Be_Ignored'
+blacklisted-worlds: []
+
+# Delay in ticks of the break block checks. Minimum is 5!
+# default: 8
+break-delay: 8
+
+# Delay in ticks to check for decaying leaves
+# default: 4
+decay-delay: 4
+
+# Enable particle for decaying leaves
+leaf-particles: true
+
+# Enable for stepwise leaf decaying (very slow!)
+one-by-one: false
+
+# Do you want to have sounds, when leaves are decaying?
+use-leaf-sounds: true
+
+# When executing commands, do you want to hear sounds?
+use-plugin-sounds: true
+
+messages:
+  # This is the plugins chat prefix
+  # If you don't want to use it, you can just remove %prefix% in the following messages
+  prefix: '&8[&2&lRHLeafDecay&8]'
+  # Messages support 1.16+ hex colors
+  leafdecay:
+    usage:
+      - '&7- - - &8[&2&lRHLeafDecay&8]&7 - - -'
+      - ''
+      - ' &f/leaf &ereload&8&o* &8-&7 &ereloads &7the config file'
+    reload: '%prefix% &7The configuration has been reloaded'
+    no-permission: '%prefix% &7You don''t have the permission for that'

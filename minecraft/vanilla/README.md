@@ -30,6 +30,7 @@ Bedrock Edition 클라이언트에서 이상하게 작동할 수 있습니다.
   - [x] 경작지에서 뛰어다녀도 농작물이 짓밟히지 않음 - [SimpleNoCropTrample](https://www.spigotmc.org/resources/simplenocroptrample.73609/) :star:
   - [ ] 작물 수확으로 경험치 획득
   - [ ] 다 자란 작물을 괭이로 우클릭해 수확
+- [x] 공중 나뭇잎 소거
 - [ ] 버림 방지
 - [ ] 쓰레기통
 - [ ] 귀환
@@ -47,7 +48,6 @@ Bedrock Edition 클라이언트에서 이상하게 작동할 수 있습니다.
 - [ ] Sleep -> Buff
 - [ ] Healing Campfire
 - [ ] Dynamic Light?
-- [ ] FastLeafDecay?
 - [ ] Chunk Claim
 - [ ] Teams
 - [ ] Escape!

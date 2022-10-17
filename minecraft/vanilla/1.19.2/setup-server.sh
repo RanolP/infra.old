@@ -50,6 +50,10 @@ DOWNLOAD "https://lol.scarsz.me/RlLqpp/DiscordSRV-Build-1.26.0.jar" INTO "plugin
 SUBSTEP "SimpleNoCropTrample"
 DOWNLOAD "https://github.com/KettleMC-Network/SimpleNoCropTrample/releases/download/1.0.0/SimpleNoCropTrample.jar" INTO "plugins/SimpleNoCropTrample 1.0.0.jar" 
 
+SUBSTEP "RHLeafDecay"
+SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
+# DOWNLOAD_PLUGIN "83581" VERSION "472238" INTO "plugins/RHLeafDecay-1.19_R3.jar"
+
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties
 RUN cp $DIR/baseconfig/spigot.yml $DIR/spigot.yml

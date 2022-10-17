@@ -48,11 +48,11 @@ plugins/DiscordSRV/config.yml
 !baseconfig/**/*
 
 ## Pre-fetched plugins
-
 !plugins/Graves-4.9.jar
 !plugins/PlayerNPC 2022.8.jar
 !plugins/ChestSort-13.4.0.jar
 !plugins/LuckPerms-Bukkit-5.4.40.jar
+!plugins/RHLeafDecay-1.19_R3.jar
 
 ## Development Stage Data
 plugins/MethodScript

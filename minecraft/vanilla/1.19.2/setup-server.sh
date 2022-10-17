@@ -8,7 +8,7 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 10 "Install Plugins"
+BEGIN_SUBSTEP 11 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
@@ -46,6 +46,9 @@ DOWNLOAD "https://github.com/PlayPro/CoreProtect/releases/download/v21.2/CorePro
 
 SUBSTEP "DiscordSRV"
 DOWNLOAD "https://lol.scarsz.me/RlLqpp/DiscordSRV-Build-1.26.0.jar" INTO "plugins/DiscordSRV-Build-1.26.0.jar"
+
+SUBSTEP "SimpleNoCropTrample"
+DOWNLOAD "https://github.com/KettleMC-Network/SimpleNoCropTrample/releases/download/1.0.0/SimpleNoCropTrample.jar" INTO "SimpleNoCropTrample 1.0.0.jar" 
 
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties

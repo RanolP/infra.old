@@ -36,6 +36,7 @@ plugins/CoreProtect/
 plugins/DiscordSRV/alerts.yml
 plugins/DiscordSRV/synchronization.yml
 plugins/DiscordSRV/voice.yml
+plugins/DiscordSRV/linkedaccounts.json
 
 ## Configuration should be overwritted
 

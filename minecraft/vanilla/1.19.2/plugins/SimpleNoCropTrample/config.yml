@@ -1,0 +1,5 @@
+disable-mob-trampling: true
+disable-player-trampling: true
+farmlands-blocks:
+- FARMLAND
+- SOIL

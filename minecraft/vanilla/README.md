@@ -8,21 +8,26 @@ Ranol☆P가 운영하는 Minecraft, Minecraft: Java Edition 서버입니다.
 
 기본적으로 기능은 Minecraft: Java Edition을 기준으로 개발되어 있기 때문에
 Bedrock Edition 클라이언트에서 이상하게 작동할 수 있습니다.
-Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 추가로 붙어 있으니 참고하시면 되겠습니다.
-호환성이 검증되지 않은 경우 :question:이 붙어 있습니다.
+아래 표에 나온 기호를 참고해 기능을 살펴보시기 바랍니다.
+
+| 기호      | 설명                          |
+| --------- | ----------------------------- |
+| :star:    | 호환됩니다.                   |
+| :cross:   | 호환되지 않습니다.            |
+| :warning: | 호환성이 검증되지 않았습니다. |
 
 ## 삶의 품질을 높이는 기능 목록
 
 - [x] 웹 지도 - [BlueMap](https://www.spigotmc.org/resources/bluemap.83557/) :star:
 - [x] Java/Bedrock 에디션 동시 지원 - [Geyser](https://github.com/GeyserMC/Geyser) + [Floodgate](https://github.com/GeyserMC/Floodgate) :star:
 - [x] 시체 회수 - [Graves](https://www.spigotmc.org/resources/graves.74208/) :star:
-- [x] 상자 정리 - [ChestSort](https://www.spigotmc.org/resources/chestsort-api.59773/) :question:
+- [x] 상자 정리 - [ChestSort](https://www.spigotmc.org/resources/chestsort-api.59773/) :warning:
 - [x] Discord 채팅 연동 - [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) :star:
-- [x] Bundle 레시피 제공 - 가죽 획득 시 해금됨
-- [x] 50% 수면으로 밤 넘기기
-- [x] 블록은 터트리지 않는 크리퍼
+- [x] Bundle 레시피 제공 - 가죽 획득 시 해금됨 :cross:
+- [x] 50% 수면으로 밤 넘기기 :star:
+- [x] 블록은 터트리지 않는 크리퍼 :star:
 - [ ] 농사 편의성
-  - [x] 경작지에서 뛰어다녀도 농작물이 짓밟히지 않음 - [SimpleNoCropTrample](https://www.spigotmc.org/resources/simplenocroptrample.73609/)
+  - [x] 경작지에서 뛰어다녀도 농작물이 짓밟히지 않음 - [SimpleNoCropTrample](https://www.spigotmc.org/resources/simplenocroptrample.73609/) :star:
   - [ ] 작물 수확으로 경험치 획득
   - [ ] 다 자란 작물을 괭이로 우클릭해 수확
 - [ ] 버림 방지

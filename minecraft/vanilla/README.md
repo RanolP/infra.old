@@ -20,6 +20,11 @@ Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 �
 - [x] Discord 채팅 연동 - [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) :star:
 - [x] Bundle 레시피 제공 - 가죽 획득 시 해금됨
 - [x] 50% 수면으로 밤 넘기기
+- [x] 블록은 터트리지 않는 크리퍼
+- [ ] 농사 편의성
+  - [x] 경작지에서 뛰어다녀도 농작물이 짓밟히지 않음 - [SimpleNoCropTrample](https://www.spigotmc.org/resources/simplenocroptrample.73609/)
+  - [ ] 작물 수확으로 경험치 획득
+  - [ ] 다 자란 작물을 괭이로 우클릭해 수확
 - [ ] 버림 방지
 - [ ] 쓰레기통
 - [ ] 귀환
@@ -51,10 +56,6 @@ Bedrock Edition 클라이언트에서 사용 가능한 경우 :star: 표시가 �
   - [ ] Wall-run
   - [ ] Wall Climb
 - [ ] Travel Anchor
-- [ ] Farming QoL
-  - [ ] Farming -> XP
-  - [ ] No Trampling
-  - [ ] Right Click Harvest
 - [ ] Tiny Charcoal <- Disc Fragment
 - [ ] Wither Skeleton Skull Fragment <- Dark Oak Button
 - [ ] Summoning Altar

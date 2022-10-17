@@ -48,7 +48,7 @@ SUBSTEP "DiscordSRV"
 DOWNLOAD "https://lol.scarsz.me/RlLqpp/DiscordSRV-Build-1.26.0.jar" INTO "plugins/DiscordSRV-Build-1.26.0.jar"
 
 SUBSTEP "SimpleNoCropTrample"
-DOWNLOAD "https://github.com/KettleMC-Network/SimpleNoCropTrample/releases/download/1.0.0/SimpleNoCropTrample.jar" INTO "SimpleNoCropTrample 1.0.0.jar" 
+DOWNLOAD "https://github.com/KettleMC-Network/SimpleNoCropTrample/releases/download/1.0.0/SimpleNoCropTrample.jar" INTO "plugins/SimpleNoCropTrample 1.0.0.jar" 
 
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties

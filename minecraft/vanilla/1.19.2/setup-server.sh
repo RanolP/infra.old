@@ -8,7 +8,7 @@ BEGIN_STEPS 3
 STEP "Install Paper 1.19.2-201"
 DOWNLOAD "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/201/downloads/paper-1.19.2-201.jar" INTO "server.jar"
 
-BEGIN_SUBSTEP 11 "Install Plugins"
+BEGIN_SUBSTEP 14 "Install Plugins"
 RUN mkdir -p $DIR/plugins
 
 SUBSTEP "BlueMap"
@@ -53,6 +53,12 @@ DOWNLOAD "https://github.com/KettleMC-Network/SimpleNoCropTrample/releases/downl
 SUBSTEP "RHLeafDecay"
 SKIPPED "This plugin cannot be easily obtainable from the internet; The plugin has been pre-fetched."
 # DOWNLOAD_PLUGIN "83581" VERSION "472238" INTO "plugins/RHLeafDecay-1.19_R3.jar"
+
+SUBSTEP "RightClickHarvest"
+DOWNLOAD "https://github.com/felix2300/Spigot-RightClickHarvest/releases/download/1.5/rightClickHarvest.jar" INTO "plugins/RightClickHarvest 1.5.jar"
+
+SUBSTEP "Waypoints"
+DOWNLOAD "https://github.com/Sytm/waypoints/releases/download/v3.5.4/waypoints-3.5.4.jar" INTO "plugins/waypoints-3.5.4.jar"
 
 STEP "Copy Base Configurations"
 RUN cp $DIR/baseconfig/server.properties $DIR/server.properties

@@ -1,0 +1,320 @@
+database:
+  # Time period after which death waypoints are deleted. Set all values to zero to disable
+  deathWaypointRetentionPeriod:
+    years: 0
+    months: 0
+    days: 7
+
+general:
+  # Set the language for the plugin here
+  language: ko
+
+  # What to do when a waypoint is loaded that is in a world that has been deleted / renamed. Available options:
+  # SHOW: Shows the waypoint normally, but cannot be selected or teleported to
+  # HIDE: The waypoint will be hidden in the GUI, but will reappear once the world is back
+  # DELETE: The waypoint will be permanently deleted
+  worldNotFound: HIDE
+
+  uuidCache:
+    # Max size of the internal UUID-Cache
+    maxSize: 100
+    # Set time in hours after saved UUIDs will be removed from the cache
+    expireAfter: 24
+
+  features:
+    # Set to "false" to disable global waypoints
+    globalWaypoints: true
+    # Set to "false" to disable death waypoints
+    deathWaypoints: false
+
+  # Automatically select the last death waypoint upon death
+  pointToDeathWaypointOnDeath:
+    enabled: false
+    # Overwrites the current selected waypoint with the death waypoint
+    overwriteCurrent: false
+
+  # Connected worlds in this list allow the translation of the coordinates 1:8, so you can for example navigate in the nether to a waypoint in the overworld
+  connectedWorlds:
+    - overworld: world
+      nether: world_the_nether
+
+  openWithItem:
+    enabled: true
+
+    # Available options are RIGHT (right-click) and LEFT (left-click)
+    click: RIGHT
+
+    # If set to true the player must sneak and then use the item to open the inventory
+    # Otherwise it doesn't matter if the player is sneaking
+    mustSneak: true
+
+    # Any of the following item can be used to open the GUI
+    items:
+      - COMPASS
+
+  customIconFilter:
+    # Available options:
+    # blacklist: Items in the list are forbidden
+    # whitelist: Only items on the list are allowed
+    type: blacklist
+    # AIR is always disallowed
+    materials:
+      - BARRIER
+      - BEDROCK
+
+  waypoints:
+    # Maximum amount of private waypoints a player can have. Players with the permission waypoints.unlimited are not affected by this restriction
+    limit: 200
+    # Allow or disallow duplicate names for private, public or permission waypoints
+    allowDuplicateNames:
+      private: true
+      public: false
+      permission: false
+
+  folders:
+    # Maximum amount of private folders a player can have. Players with the permission waypoints.unlimited are not affected by this restriction
+    limit: 20
+    # Allow or disallow duplicate names for private, public or permission folders
+    allowDuplicateNames:
+      private: true
+      public: false
+      permission: false
+
+  teleport:
+    # When a player clicks the teleport button he has to stand still for at least x amount of time before getting teleported.
+    # Set to 0s to disable
+    standStillTime: 3s
+
+    # The cooldown between each teleportation for a player
+    # Set to 0s to disable
+    # Available types are: disabled, free, xp (levels), vault (your economy plugins currency)
+    # You can provide a formula to calculate the price. The variable n is how often a player teleported
+    # When using the payment method xp the returned value is rounded to the closest full value
+    private:
+      cooldown: 24h
+
+      paymentType: disabled
+      maxCost: 10
+      formula: 1 + n
+
+    death:
+      cooldown: 24h
+
+      # Allows the player to only teleport to the last location they died at, not all of them
+      onlyLastWaypoint: true
+
+      paymentType: disabled
+      maxCost: 10
+      formula: 10
+
+    public:
+      cooldown: 24h
+
+      paymentType: disabled
+      maxCost: 8
+      formula: 2 + n
+
+    permission:
+      cooldown: 4h
+
+      paymentType: disabled
+      maxCost: 3
+      formula: n
+
+integrations:
+  dynmap:
+    # See https://github.com/webbukkit/dynmap/wiki/Using-Markers#marker-icons for more information
+    icon: default
+  squaremap:
+    # The icon id must either be the full key of an existing icon that got registered by another plugin (see "plugins/squaremap/web/images/icon/registered")
+    # Or it must be the name of an icon in the folder "plugins/Waypoints/sqm-icons".
+    # Examples:
+    # plugins/squaremap/web/images/icon/registered/squaremap-spawn_icon.png -> squaremap-spawn_icon.png
+    # plugins/Waypoints/sqm-icons/special.png -> special
+    icon: w
+    iconSize: 20
+
+playerTracking:
+  enabled: false
+  # When true, players can enable / disable being able to be tracked in the GUI
+  toggleable: true
+  # When true, players can only track other players when they themselves can be tracked by other players
+  trackingRequiresTrackable: false
+  # When true, the tracked player is notified when someone starts to track them
+  notification: true
+
+pointers:
+  # Automatically deselects the waypoint when the player gets into the defined radius. Set to zero to disable
+  disableWhenReachedRadius: 5
+
+  actionBar:
+    enabled: true
+
+    interval: 20
+    # The indicator color is used to show where the waypoint is by changing the color of one of the sections
+    indicatorColor: '&4&l'
+    # The background color for the sections
+    normalColor: '&7&l'
+    # Character to use as the colored direction indicators
+    section: '⬛'
+    # If you turn too much to either side these arrows are highlighted to indicator you need tp turn more
+    arrow:
+      left: '<-'
+      right: '->'
+    # The amount of sections used to show if you are walking in the correct direction. Must be an odd number or the plugin will correct it by adding one
+    amountOfSections: 35
+    # The range of between the center section and most outer section in degrees. So the field of view of the action bar indicator is range x 2
+    range: 70
+    # Show the distance to the waypoint instead of the direction indicator when the player is sneaking
+    showDistance:
+      enabled: true
+
+  beacon:
+    enabled: true
+
+    interval: 30
+    minDistance: 50
+    # If set to auto it will use the render distance of the server
+    maxDistance: auto
+    # The base block for the beacon. Use one of these for it to work: IRON_BLOCK, GOLD_BLOCK, DIAMOND_BLOCK, EMERALD_BLOCK (or NETHERITE_BLOCK if on 1.16 or higher)
+    baseBlock: IRON_BLOCK
+    defaultColor:
+      private: CLEAR
+      # The color of the death waypoint cannot be changed
+      death: RED
+      public: GREEN
+      permission: PURPLE
+      player: PINK
+      temporary: ORANGE
+
+  blinkingBlock:
+    enabled: true
+
+    # The interval in game ticks when the block should be changed
+    interval: 20
+    # The minimum and maximum distance for the blinking block to be visible
+    # Keep in mind that if you set the min distance to low it could be possible for the player to stand on the client-side block and get kicked for flying
+    minDistance: 10
+    maxDistance: 50
+    # The blocks that will be cycled through
+    blockSequence:
+      - GLASS
+      - GLOWSTONE
+
+  compass:
+    enabled: true
+
+    # The interval in game ticks when the compass target should be updated. Only relevant when tracking players
+    interval: 20
+
+  particle:
+    enabled: true
+
+    interval: 30
+    # The height offset from the ground where the particles should spawn
+    heightOffset: 0
+    # If set to true, the particles will also point into the direction of the waypoint vertically
+    showVerticalDirection: false
+    # The amount of particles
+    amount: 10
+    # The total length of the particles in blocks
+    length: 1
+    # See here for different particles https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+    particle: FLAME
+
+  hologram:
+    # Requires ProtocolLib to be actually available
+    enabled: true
+
+    interval: 30
+
+    maxDistance: 50
+
+inventory:
+  general:
+    previous: ARROW
+    next: ARROW
+    back: BARRIER
+
+  background:
+    private: GREEN_STAINED_GLASS_PANE
+    death: RED_STAINED_GLASS_PANE
+    public: BLUE_STAINED_GLASS_PANE
+    permission: YELLOW_STAINED_GLASS_PANE
+
+  overview:
+    cycleSort: HOPPER
+    toggleGlobals:
+      visible: ENDER_CHEST
+      hidden: CHEST
+    deselect: MILK_BUCKET
+    setWaypoint: TORCH
+    createFolder: WRITABLE_BOOK
+
+  listing:
+    public: ENCHANTED_BOOK
+    permission: ENCHANTED_BOOK
+    tracking: PLAYER_HEAD
+
+  waypoint:
+    icon:
+      private: BEACON
+      death: SKELETON_SKULL
+      public: BEACON
+      permission: BEACON
+
+    select: REDSTONE
+    delete:
+      item: LAVA_BUCKET
+      question: OAK_SIGN
+      confirm: LAVA_BUCKET
+      cancel: WATER_BUCKET
+    rename: NAME_TAG
+    moveToFolder: CHEST_MINECART
+    teleport: ENDER_PEARL
+    selectBeaconColor: LIME_STAINED_GLASS
+    getUuid: PAPER
+    editPermission: IRON_BARS
+    make:
+      public:
+        item: ENCHANTED_BOOK
+        question: OAK_SIGN
+        confirm: ENCHANTED_BOOK
+        cancel: BARRIER
+      permission:
+        item: ENCHANTED_BOOK
+        question: OAK_SIGN
+        confirm: ENCHANTED_BOOK
+        cancel: BARRIER
+    changeMapIcon: FILLED_MAP
+
+  folder:
+    icon:
+      private: BOOK
+      death: SKELETON_SKULL
+      public: BOOK
+      permission: BOOK
+
+    delete:
+      item: LAVA_BUCKET
+      question: OAK_SIGN
+      confirm: LAVA_BUCKET
+      cancel: WATER_BUCKET
+    rename: NAME_TAG
+
+  selectFolder:
+    noFolder: MINECART
+
+  selectBeaconColor:
+    moveLeft: ARROW
+    moveRight: ARROW
+
+  confirm:
+    background: GRAY_STAINED_GLASS_PANE
+
+  tracking:
+    background: GRAY_STAINED_GLASS_PANE
+    trackable:
+      enabled: ENDER_EYE
+      disabled: ENDER_PEARL
+    refresh: FISHING_ROD

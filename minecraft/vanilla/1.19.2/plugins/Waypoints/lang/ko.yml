@@ -1,0 +1,500 @@
+prefix: '&b&lWaypoints &e&l>&r'
+scriptPrefix: '&b&lWaypoints&aScript &e&l>&r'
+
+worlds:
+  world: '오버월드'
+  world_nether: '네더'
+  world_the_end: '디 엔드'
+
+command:
+  notAPlayer: '$[prefix] &c플레이어만 사용할 수 있는 명령어입니다.'
+  noPermission: '$[prefix] &c실행할 권한이 없습니다.'
+  notFound: '$[prefix] &c입력하신 명령어를 찾을 수 없습니다.'
+
+  script:
+    help:
+      header: '$[scriptPrefix] &7&n도움말'
+      deselectWaypoint: '&7 - &e/${label} deselectWaypoint <Player-Name> &7&l|&r&7 Remove the waypoint selection of a player'
+      selectWaypoint: '&7 - &e/${label} selectWaypoint <Player-Name> <Waypoint-UUID> &7&l|&r&7 Set the waypoint selection of a player to that waypoint'
+
+    deselectWaypoint:
+      wrongUsage: |
+        $[scriptPrefix] &cYou need to provide the name of an online player to remove the waypoint selection from. Example:
+        &a/${label} deselectWaypoint Sytm
+
+    selectWaypoint:
+      wrongUsage: |
+        $[scriptPrefix] &cYou need to provide the name of an online player and the UUID of an waypoint to set the selection of a player. Example:
+        &a/${label} selectWaypoint Sytm 86a33aff-7d62-49d3-86c2-8cb5076c5bc0
+      # uuid: ID of the waypoint that could not be found
+      waypointNotFound: '$[scriptPrefix] &cCould not find a waypoint with the UUID &e${uuid}&c.'
+
+    playerNotFound: '$[scriptPrefix] &cCould not find an online player with the name &e${name}&c.'
+    invalidUuid: '$[scriptPrefix] &cThe uuid &e${uuid}&c is not in a valid format.'
+
+  help:
+    header: '$[prefix] &7&nHelp'
+    gui: '&7 - &e/${label} &7&l|&r&7 Open the Waypoints GUI'
+    help: '&7 - &e/${label} help &7&l|&r&7 Shows this help message'
+    set:
+      private: '&7 - &e/${label} set <Name> &7&l|&r&7 Create a new waypoint'
+      public: '&7 - &e/${label} setPublic <Name> &7&l|&r&7 Create a new public waypoint'
+      permission: '&7 - &e/${label} setPermission <Permission> <Name> &7&l|&r&7 Create a new permission waypoint'
+      temporary: '&7 - &e/${label} setTemporary <X> <Y> <Z> &7&l|&r&7 Target a waypoint that is not saved'
+    other: '&7 - &e/${label} other <Name|UUID> &7&l|&r&7 View the waypoints of another player'
+    statistics: '&7 - &e/${label} statistics &7&l|&r&7 View the statistics of the database'
+    import: '&7 - &e/${label} import &7&l|&r&7 Import waypoints from Waypoints V2'
+    reload: '&7 - &e/${label} reload &7&l|&r&7 Reload the configuration'
+
+  set:
+    wrongUsage:
+      private: |
+        $[prefix] &cYou need to provide a name to create a new waypoint. Example:
+        &a/${label} set My Home
+      public: |
+        $[prefix] &cYou need to provide a name to create a new public waypoint. Example:
+        &a/${label} setPublic Spawn
+      permission: |
+        $[prefix] &cYou need to provide a permission and a name to create a new permission waypoint. Example:
+        &a/${label} setPermission ranks.vip.secretHideout Secret Hideout
+      temporary: |
+        $[prefix] &cYou need to provide coordinates to set a temporary waypoint. Example:
+        &a/${label} setTemporary 196 93 -187
+
+  other:
+    wrongUsage: |
+      $[prefix] &cTo view the waypoints of another player you need to provide their name or UUID. Example:
+      &a/${label} other Sytm
+      &a/${label} other 68f22021-732e-4afe-9cf5-6906f07a41db
+    notFound:
+      uuid: '$[prefix] &cA player with that UUID could not be found.'
+      name: '$[prefix] &cA player with that name could not be found.'
+    notUuidOrName: '$[prefix] &cThe provided identifier is neither a UUID nor a Minecraft username.'
+    playerNoWaypoints: '$[prefix] &cThe provided player has no waypoints.'
+    notANumber: '$[prefix] &cThe provided values could not be read as numbers.'
+
+  statistics:
+    # dbFileSize: Size of the database in SI Units
+    # totalWaypoints: Total amount of waypoints
+    # privateWaypoints: Amount of private waypoints
+    # deathWaypoints: Amount of death waypoints
+    # publicWaypoints: Amount of public waypoints
+    # permissionWaypoints: Amount of permission waypoints
+    # totalFolders: Total amount of folders
+    # privateFolders: Amount of private folders
+    # publicFolders: Amount of public folders
+    # permissionFolders: Amount of permission folders
+    message: |
+      $[prefix] &7Database-Statistics
+      &7Filesize: &e${dbFileSize}
+
+      &7Total waypoints: &e${totalWaypoints}
+      &7Private waypoints: &e${privateWaypoints}
+      &7Death waypoints: &e${deathWaypoints}
+      &7Public waypoints: &e${publicWaypoints}
+      &7Permission waypoints: &e${permissionWaypoints}
+
+      &7Total folders: &e${totalFolders}
+      &7Private folders: &e${privateFolders}
+      &7Public folders: &e${publicFolders}
+      &7Permission folders: &e${permissionFolders}
+
+  reload:
+    finished: '$[prefix] &7설정을 다시 불러왔습니다.'
+
+text:
+  duration:
+    second: '초'
+    seconds: '초'
+
+    minute: '분'
+    minutes: '분'
+
+    hour: '시간'
+    hours: '시간'
+
+    day: '일'
+    days: '일'
+
+  worldNotFound: '?'
+
+  distance:
+    otherWorld: '?'
+
+  sortOptions:
+    type_ascending: 'Type'
+    type_descending: 'Type (Descending)'
+    name_ascending: 'Name'
+    name_descending: 'Name (Descending)'
+    created_ascending: 'Creation date'
+    created_descending: 'Creation date (Descending)'
+
+  beaconColors:
+    clear: '&7No color'
+    light_gray: '&7Light gray'
+    gray: '&7Gray'
+    pink: '&7Pink'
+    lime: '&7Lime'
+    yellow: '&7Yellow'
+    light_blue: '&7Light blue'
+    magenta: '&7Magenta'
+    orange: '&7Orange'
+    white: '&7White'
+    black: '&7Black'
+    red: '&7Red'
+    green: '&7Green'
+    brown: '&7Brown'
+    blue: '&7Blue'
+    cyan: '&7Cyan'
+    purple: '&7Purple'
+
+message:
+  featureDisabled: '$[prefix] &c해당 기능은 비활성화되어 있습니다.'
+
+  waypoint:
+    create:
+      coordinates:
+        outOfBounds: '$[prefix] &cThe location you are trying to create the waypoint at is out of bounds.'
+        invalidFormat: |
+          $[prefix] &cThe coordinates must be provided in the following format:
+          &a102/35/-238
+    limitReached:
+      private: '$[prefix] &cYou have reached your personal limit of waypoints you can create.'
+    nameDuplicate:
+      private: '$[prefix] &cWaypoints with duplicate names are not permitted.'
+      public: '$[prefix] &cPublic waypoints with duplicate names are not permitted.'
+      permission: '$[prefix] &cPermission waypoints with duplicate names are not permitted.'
+    setSuccess:
+      private: '$[prefix] &7The waypoint has been created successfully.'
+      public: '$[prefix] &7The public waypoint has been created successfully.'
+      permission: '$[prefix] &7The permission waypoint has been created successfully.'
+    # name: Name of the waypoint
+    getUuid: '$[prefix] &7Click on this message to get the UUID of the waypoint &e${name}&7.'
+    newIconInvalid: '$[prefix] &cThe item you are trying to use as a new icon for the waypoint is not allowed.'
+
+  folder:
+    limitReached:
+      private: '$[prefix] &cYou have reached your personal limit of folders you can create.'
+    nameDuplicate:
+      private: '$[prefix] &cFolders with duplicate names are not permitted.'
+      public: '$[prefix] &cPublic folders with duplicate names are not permitted.'
+      permission: '$[prefix] &cPermission folders with duplicate names are not permitted.'
+    createSuccess:
+      private: '$[prefix] &7The folder has been created successfully.'
+      public: '$[prefix] &7The public folder has been created successfully.'
+      permission: '$[prefix] &7The permission folder has been created successfully.'
+    newIconInvalid: '$[prefix] &cThe item you are trying to use as a new icon for the folder is not allowed.'
+
+  teleport:
+    # remainingCooldown: Time left until player can teleport again
+    onCooldown: '$[prefix] &cYou cannot teleport for &e${remainingCooldown}&c.'
+    notEnough:
+      # currentLevel: Level of the player
+      # requiredLevel: Level required for teleportation
+      xp: |
+        $[prefix] &cYou don't have enough experience levels for teleportation.
+        &cRequired level: &e${requiredLevel}
+      # currentBalance: Vault balance of the player
+      # requiredBalance: Vault balance required for teleportation
+      balance: |
+        $[prefix] &cYou don't have enough balance for teleportation.
+        &cRequired balance: &a${requiredBalance}
+    standStill:
+      # duration: Amount of time the player needs to stand still
+      notice: '$[prefix] &7You need to stand still for &e${duration}&7.'
+      moved: '$[prefix] &cYou have moved and the scheduled teleport has been canceled.'
+
+  tracking:
+    playerNoLongerOnline: '$[prefix] &cThe player you are trying to track is no longer online.'
+    trackableRequired: '$[prefix] &cTo track other players you must make yourself visible.'
+    notification: '$[prefix] &7The player &e${name}&7 is tracking you.'
+
+pointers:
+  actionBar:
+    # current: Translated name of the world the player is in
+    # correct: Translated name of the world the waypoint is in
+    wrongWorld: '&cYou are currently in the world &a${current}&c, but the waypoint is in &a${correct}'
+    # distance3D: Distance to the waypoint in blocks
+    # heightDifference: Height difference between player and waypoint. Positive when to high, negative when to low
+    distance: '&7You are &e${distance3D}&7 blocks away from your target'
+
+  hologram:
+    # Set the text of the floating hologram here.
+    # name: Name of the waypoint
+    # createdAt: Date at which the waypoint was created
+    # world: World where the waypoint is located at
+    # x, y, z: Coordinates of the waypoint
+    # blockX, blockY, blockZ: Coordinates of the block nearest to the waypoint
+    private: '&5${name}'
+    death: '&cDeath ${createdAt}'
+    public: '&b${name}'
+    permission: '&d${name}'
+    temporary: '&5Temporary Waypoint'
+
+integrations:
+  maps:
+    label: 'Public waypoints'
+
+inventory:
+  title:
+    self: '&8Your waypoints'
+    # name: Name of the other player
+    other: '&8Waypoints of &9${name}'
+
+  general:
+    previous:
+      displayName: '&ePrevious page'
+      description: ''
+    next:
+      displayName: '&eNext page'
+      description: ''
+    back:
+      displayName: '&eGo back'
+      description: ''
+
+  background:
+    private:
+      displayName: '&0-'
+      description: ''
+    death:
+      displayName: '&0-'
+      description: ''
+    public:
+      displayName: '&0-'
+      description: ''
+    permission:
+      displayName: '&0-'
+      description: ''
+
+  overview:
+    # selectionList: The list showing available and the active options
+    cycleSort:
+      displayName: '&eSort by'
+      description: "\n${selectionList}"
+      activeColor: '&6'
+      inactiveColor: '&7'
+
+    toggleGlobals:
+      visible:
+        displayName: '&eGlobal waypoints are visible'
+        description: '&7Click here to hide them'
+      hidden:
+        displayName: '&eGlobal waypoints are hidden'
+        description: '&7Click here to show them'
+
+    deselect:
+      displayName: '&eDeselect waypoint'
+      description: '&7The direction indicators are no longer shown to you'
+    setWaypoint:
+      displayName: '&eCreate a new waypoint'
+      description: |
+        &7The waypoint will be created in the current folder
+
+        &7If you &eshift-click&7, you can create a waypoint
+        &7by providing coordinates like this:
+        &a102/35/-238
+    createFolder:
+      displayName: '&eCreate new folder'
+      description: ''
+
+  # amount: Amount of waypoints in this global folder visible for the player
+  listing:
+    public:
+      displayName: '&bPublic waypoints'
+      description: '&7Amount: &6${amount}'
+    permission:
+      displayName: '&dRestricted waypoints'
+      description: '&7Available for you: &6${amount}'
+    tracking:
+      displayName: '&aPlayers'
+      description: '&7Track other players'
+
+  waypoint:
+    # name: Name of the waypoint
+    # createdAt: Date at which the waypoint was created
+    # world: World where the waypoint is located at
+    # x, y, z: Coordinates of the waypoint
+    # blockX, blockY, blockZ: Coordinates of the block nearest to the waypoint
+    # distance: Distance in blocks to the player
+    icon:
+      description: &waypointDescription |
+        &7World: &6${world}
+        &7X: &6${blockX}
+        &7Y: &6${blockY}
+        &7Z: &6${blockZ}
+        &7Distance: &6${distance}
+
+        &7Created at: &6${createdAt}
+
+      private:
+        displayName: '&5${name}'
+        description: *waypointDescription
+      death:
+        displayName: '&cDeath ${createdAt}'
+        description: |
+          &7World: &6${world}
+          &7X: &6${blockX}
+          &7Y: &6${blockY}
+          &7Z: &6${blockZ}
+          &7Distance: &6${distance}
+      public:
+        displayName: '&b${name}'
+        description: *waypointDescription
+      permission:
+        displayName: '&d${name}'
+        description: *waypointDescription
+
+    select:
+      displayName: '&eSelect waypoint'
+      description: '&7Click here to make this waypoint your active one'
+    delete:
+      displayName: '&4Delete waypoint'
+      description: ''
+      question:
+        displayName: '&7Do you really want to delete &e${name}&7?'
+        description: ''
+      confirm:
+        displayName: '&cYes, delete &e${name}&c!'
+        description: ''
+      cancel:
+        displayName: '&aNo, do not delete &e${name}&a.'
+        description: ''
+    rename:
+      displayName: '&eRename waypoint'
+      description: ''
+    moveToFolder:
+      displayName: '&eMove waypoint into a folder'
+      description: |
+        &7Put the waypoint into a folder to group it,
+        or remove it from the current folder
+    teleport:
+      displayName: '&eTeleport to waypoint'
+      # paymentNotice: A payment notice informing the player how much the teleportation will cost him, or if it is free nothing
+      description: '${paymentNotice}'
+      # levels: The amount of levels required for teleportation
+      xpLevel: '&7You need &e${levels}&7 levels to perform this teleportation.'
+      # balance: The amount of balance required for teleportation
+      balance: '&7You need &e${balance}&7 balance to perform this teleportation.'
+    selectBeaconColor:
+      displayName: '&eChange the color of the beacon beam'
+      description: ''
+    getUuid:
+      displayName: '&eGet the UUID of the waypoint'
+      description: '&7Sends a clickable message that enters the UUID into the chat'
+    editPermission:
+      displayName: '&eChange required permission'
+      description: '&7Current permission is &e${permission}'
+    make:
+      public:
+        displayName: '&eMake waypoint public'
+        description: ''
+        question:
+          displayName: '&7Do you really want to make &e${name}&7 public?'
+          description: ''
+        confirm:
+          displayName: '&cYes, make &e${name}&c public!'
+          description: ''
+        cancel:
+          displayName: '&aNo, do not make &e${name}&a public.'
+          description: ''
+      permission:
+        displayName: '&eMake waypoint a permission waypoint'
+        description: ''
+        question:
+          displayName: '&7Do you really want to make &e${name}&7 a permission waypoint?'
+          description: ''
+        confirm:
+          displayName: '&cYes, make &e${name}&c a permission waypoint!'
+          description: ''
+        cancel:
+          displayName: '&aNo, do not make &e${name}&a a permission waypoint.'
+          description: ''
+    changeMapIcon:
+      displayName: '&eChange custom web map icon'
+      description: ''
+
+    create:
+      enterName: '이름을 입력하세요'
+      enterCoordinates: '좌표를 입력하세요'
+      enterPermission: 'Enter permission here'
+
+  folder:
+    # name: Name of the folder
+    # createdAt: Date at which the folder was created
+    # amount: Amount of waypoints visible to the player
+    icon:
+      private:
+        displayName: '&5${name}'
+        description: '&7폴더 안 웨이포인트 &6${amount} &7개'
+      death:
+        displayName: '&c사망 지점'
+        description: '&7폴더 안 웨이포인트 &6${amount} &7개'
+      public:
+        displayName: '&b${name}'
+        description: '&7폴더 안 웨이포인트 &6${amount} &7개'
+      permission:
+        displayName: '&d${name}'
+        description: '&7폴더 안 웨이포인트 &6${amount} &7개'
+
+    delete:
+      displayName: '&4Delete folder'
+      description: ''
+      question:
+        displayName: '&7Do you really want to delete the folder &e${name}&7?'
+        description: ''
+      confirm:
+        displayName: '&cYes, delete the folder &e${name}&c!'
+        description: ''
+      cancel:
+        displayName: '&aNo, do not delete the folder &e${name}&a.'
+        description: ''
+    rename:
+      displayName: '&eRename folder'
+      description: ''
+
+    create:
+      enterName: '이름을 입력하세요'
+
+  selectFolder:
+    noFolder:
+      displayName: '&eNo folder'
+      description: '&7Move this waypoint back to the main overview'
+
+  selectBeaconColor:
+    moveLeft:
+      displayName: '&eMove left'
+      description: ''
+    moveRight:
+      displayName: '&eMove right'
+      description: ''
+
+  confirm:
+    background:
+      displayName: '&0-'
+      description: ''
+
+  tracking:
+    background:
+      displayName: '&0-'
+      description: ''
+    trackable:
+      enabled:
+        displayName: '&7You are visible'
+        description: '&7Other players can track you'
+      disabled:
+        displayName: '&7You are hidden'
+        description: '&7Other players cannot track you'
+    refresh:
+      displayName: '&7Update the player list'
+      description: ''
+
+    # name: Name of the player
+    # world: World where the player is located at
+    # x, y, z: Coordinates of the player
+    # blockX, blockY, blockZ: Coordinates of the block nearest to the player
+    # distance: Distance in blocks to the player
+    player:
+      displayName: '&a${name}'
+      description: |
+        &7World: &6${world}
+        &7Distance: &6${distance}

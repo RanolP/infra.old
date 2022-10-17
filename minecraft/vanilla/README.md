@@ -29,8 +29,9 @@ Bedrock Edition 클라이언트에서 이상하게 작동할 수 있습니다.
 - [ ] 농사 편의성
   - [x] 경작지에서 뛰어다녀도 농작물이 짓밟히지 않음 - [SimpleNoCropTrample](https://www.spigotmc.org/resources/simplenocroptrample.73609/) :star:
   - [ ] 작물 수확으로 경험치 획득
-  - [ ] 다 자란 작물을 괭이로 우클릭해 수확
+  - [x] 다 자란 작물을 우클릭해 수확 - [RightClickHarvest](https://www.spigotmc.org/resources/rightclickharvest.84620/) :star:
 - [x] 공중 나뭇잎 소거
+- [x] 웨이포인트 지정 - [Waypoints](https://www.spigotmc.org/resources/waypoints.66647/) :warning:
 - [ ] 버림 방지
 - [ ] 쓰레기통
 - [ ] 귀환

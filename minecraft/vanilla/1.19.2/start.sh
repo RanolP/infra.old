@@ -2,4 +2,10 @@
 
 DIR=`dirname ${BASH_SOURCE[0]}`
 
-(cd $DIR; java -jar server.jar -nogui)
+(cd $DIR; \
+    java \
+        -Xms6G -Xmx6G \
+        -XX:+UseShenandoahGC \
+        -jar server.jar \
+        -nogui
+)

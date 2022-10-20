@@ -19,6 +19,9 @@ SUBSTEP "CommandHelper"
 DOWNLOAD "https://apps.methodscript.com/builds/commandhelperjar/build-280%2Fcommandhelper-3.3.5-SNAPSHOT-full.jar" INTO "plugins/commandhelper-3.3.5-SNAPSHOT-full-build-280.jar"
 # DOWNLOAD_PLUGIN "64681" VERSION "404127" INTO "plugins/commandhelper-3.3.5-SNAPSHOT-full-build-280.jar"
 
+SUBSTEP "CommandHelper - CHNaughty"
+DOWNLOAD "https://github.com/PseudoKnight/CHNaughty/releases/download/v4.9.1/CHNaughty-4.9.1.jar" INTO "plugins/CommandHelper/extensions/CHNaughty-4.9.1.jar"
+
 SUBSTEP "GeyserMC"
 DOWNLOAD "https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/1211/artifact/bootstrap/spigot/build/libs/Geyser-Spigot.jar" INTO "plugins/Geyser-Spigot-build-1211.jar"
 

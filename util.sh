@@ -62,6 +62,7 @@ RUN() {
 }
 DOWNLOAD() {
     if [[ ! -e "$DIR/$3" ]]; then
+        mkdir -p `dirname $DIR/$3`
         labeled-echo 3 LOADING "Download $3 from"
         echo "                ▷  $1"
         curl "$1" --output "$DIR/$3" -L
@@ -71,6 +72,7 @@ DOWNLOAD() {
     fi
 }
 DOWNLOAD_PLUGIN() {
+    mkdir -p `dirname $DIR/$3`
     labeled-echo 3 LOADING "Download plugin ID $YELLOW$1$RESET version $CYAN$3$RESET into $GREEN$5$RESET"
     curl "https://www.spigotmc.org/resources/$1/download?version=$3" \
         -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0' \

@@ -38,6 +38,7 @@ bind('item_pickup', null, array(itemname: 'FEATHER'), @event) {
 }
 
 bind('player_interact', null, array(button: 'right'), @event) {
+    @player = player()
     if (_is_cooldown(@player, 'warm_wing_flap')) {
         return
     }

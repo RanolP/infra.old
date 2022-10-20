@@ -32,11 +32,13 @@ Bedrock Edition 클라이언트에서 이상하게 작동할 수 있습니다.
   - [x] 다 자란 작물을 우클릭해 수확 - [RightClickHarvest](https://www.spigotmc.org/resources/rightclickharvest.84620/) :star:
 - [x] 공중 나뭇잎 소거
 - [x] 웨이포인트 지정 - [Waypoints](https://www.spigotmc.org/resources/waypoints.66647/) :warning:
+- [ ] 귀환
+  - [x] 모닥불에 시프트 우클릭해 집 지정 :star:
+    - [x] 따스한 날갯짓 - 깃털 획득 시 해금됨, 소모 아이템 :star:
+    - [ ] 불꽃이 깃든 보석 - 자수정 획득 시 해금됨, 영구, 600초 쿨타임 :star:
+  - [ ] Waystone
 - [ ] 버림 방지
 - [ ] 쓰레기통
-- [ ] 귀환
-  - [ ] Waystone
-  - [ ] Home
 - [ ] 생명력 막대/피해 표시기
 - [ ] WAILA
 - [ ] Tips/Guide

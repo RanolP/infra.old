@@ -47,6 +47,7 @@ proc _home(@delay, @callback) {
     @player = player()
     if (@player == '~console') {
         msg(colorize('Console never have home.'))
+        execute(false, @callback)
         return
     }
     
@@ -56,6 +57,15 @@ proc _home(@delay, @callback) {
         msg(colorize('오버월드에서 &b모닥불&r에 시프트 우클릭하여 설정할 수 있습니다.'))
         msg(colorize('&b모닥불&r의 불이 꺼지거나, 파괴되거나, 폭발하는 등 블록이 손상된 경우'))
         msg(colorize('&a&l집&r 설정은 자동 &c해제&r되니 주의하십시오.'))
+        execute(false, @callback)
+        play_sound(
+            ploc(),
+            array(
+                sound: 'ENTITY_ENDER_DRAGON_HURT',
+                pitch: 0.5
+            ),
+            @player
+        )
         return
     }
     
@@ -63,6 +73,15 @@ proc _home(@delay, @callback) {
     
     if (!_is_campfire_valid(@location)) {
         msg(colorize('알 수 없는 이유로 &a&l집&r 모닥불이 손상되었습니다.'))
+        execute(false, @callback)
+        play_sound(
+            ploc(),
+            array(
+                sound: 'ENTITY_ENDER_DRAGON_HURT',
+                pitch: 0.5
+            ),
+            @player
+        )
         return
     }
 
@@ -73,6 +92,25 @@ proc _home(@delay, @callback) {
             @ref['delay'] -= 1
             @current_delay = @ref['delay'] + 1
             action_msg(player(), colorize("&6@current_delay&r 초 후 모닥불 위로 순간이동합니다."))
+            play_sound(
+                ploc(),
+                array(
+                    sound: 'BLOCK_BELL_USE',
+                    pitch: 0.5
+                ),
+                @player
+            )
+            spawn_particle(
+                location_shift(ploc(), 'UP', 1.5),
+                array(
+                    particle: 'FLAME',
+                    count: 500,
+                    speed: 0.5,
+                    xoffset: 1.5,
+                    yoffset: 2.0,
+                    zoffset: 1.5
+                )
+            )
             return
         }
         action_msg(player(), colorize("&a&l집&r 모닥불 위로 순간이동했습니다!"))
@@ -85,6 +123,25 @@ proc _home(@delay, @callback) {
         set_ploc(@location)
         execute(true, @callback)
         export("home.@player.initial_pos", null)
+        play_sound(
+            @location,
+            array(
+                sound: 'ENTITY_ENDER_DRAGON_SHOOT',
+                pitch: 0.5
+            ),
+            @player
+        )
+        spawn_particle(
+            location_shift(@location, 'UP', 1),
+            array(
+                particle: 'REVERSE_PORTAL',
+                count: 400,
+                speed: 0.01,
+                xoffset: 1.5,
+                yoffset: 2.0,
+                zoffset: 1.5
+            )
+        )
     })
     export("home.@player.id", @id)
     export("home.@player.callback", @callback)

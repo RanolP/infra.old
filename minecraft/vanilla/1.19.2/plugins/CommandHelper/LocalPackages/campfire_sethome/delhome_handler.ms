@@ -23,3 +23,9 @@ bind('entity_explode', null, null, @event) {
         _erase_campfire(@location)
     }
 }
+
+bind('block_dispense', null, array(itemname: 'WATER_BUCKET'), @event) {
+    @loc = @event['velocity']
+    @loc['world'] = @event['location']['world']
+    _erase_campfire(@loc)
+}

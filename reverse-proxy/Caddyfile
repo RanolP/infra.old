@@ -1,4 +1,4 @@
-play.ranol.tk {
+play.nanno.space {
 	redir /map /map/
 	handle_path /map/* {
 		reverse_proxy :25001
